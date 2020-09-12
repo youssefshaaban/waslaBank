@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"
+        android:layout_alignParentStart="true"
+        android:translationZ="5dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="customer location"
+            android:textColor="#fff"
+            android:padding="5dp"
+            android:textAllCaps="false"
+            android:id="@+id/pickedDirection"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="target location"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:id="@+id/targetLocation"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:text="@string/pick_client"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:id="@+id/picked"
+        android:visibility="gone"
+        android:background="@drawable/bg_rectangle_my_rides"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:text="Finish Trip"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:id="@+id/finish"
+        android:visibility="gone"
+        android:background="@drawable/bg_rectangle_my_rides"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+    <fragment
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.LiveLocationMapsActivity" />
+</RelativeLayout>
