@@ -70,7 +70,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCE29pCYj3ntftgARbTP0FA8xZyLBCF7f8" /> <!-- You must use an API key to authenticate each request to Google Maps Platform APIs -->
+            android:value="AIzaSyA9Qod1kZPKd8xsRSyoYqBXh0YZsnI0fhk" /> <!-- You must use an API key to authenticate each request to Google Maps Platform APIs -->
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -191,14 +191,6 @@
         <activity
             android:name=".ui.LiveLocationMapsActivity"
             android:label="@string/title_activity_live_location_maps">
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
 
         </activity>
     </application>

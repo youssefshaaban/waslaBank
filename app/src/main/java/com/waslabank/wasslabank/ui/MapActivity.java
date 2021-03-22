@@ -31,6 +31,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.waslabank.wasslabank.R;
+import com.waslabank.wasslabank.utils.AppUtils;
 import com.waslabank.wasslabank.utils.GPSTracker;
 import com.waslabank.wasslabank.utils.Helper;
 
@@ -73,7 +74,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle(getString(R.string.map));
 
-        Places.initialize(getApplicationContext(), "AIzaSyCE29pCYj3ntftgARbTP0FA8xZyLBCF7f8");
+        Places.initialize(getApplicationContext(), AppUtils.GOOGLE_KEY);
 
         AutocompleteSupportFragment autocompleteFragment = (AutocompleteSupportFragment)
                 getSupportFragmentManager().findFragmentById(R.id.autocomplete_fragment);
@@ -209,7 +210,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
 
     public String getAddress(LatLng latLng) {
-        new ReverseGeocoding(latLng.latitude, latLng.longitude, "AIzaSyCE29pCYj3ntftgARbTP0FA8xZyLBCF7f8")
+        new ReverseGeocoding(latLng.latitude, latLng.longitude, AppUtils.GOOGLE_KEY)
                 .setLanguage("en")
                 .fetch(new Callback() {
                     @Override

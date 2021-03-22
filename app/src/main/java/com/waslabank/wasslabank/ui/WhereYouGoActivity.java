@@ -45,6 +45,7 @@ import com.waslabank.wasslabank.models.MyRideModel;
 import com.waslabank.wasslabank.models.UpdateToken;
 import com.waslabank.wasslabank.networkUtils.Connector;
 import com.waslabank.wasslabank.ui.find_ride.FindRideActivity;
+import com.waslabank.wasslabank.utils.AppUtils;
 import com.waslabank.wasslabank.utils.GPSTracker;
 import com.waslabank.wasslabank.utils.Helper;
 
@@ -266,7 +267,7 @@ public class WhereYouGoActivity extends AppCompatActivity implements TimePickerD
                                 .withListener(WhereYouGoActivity.this)
                                 .waypoints(new LatLng(fromLocation.getLatitude(), fromLocation.getLongitude()), new LatLng(toLocation.getLatitude(), toLocation.getLongitude()))
                                 .alternativeRoutes(false)
-                                .key("AIzaSyCE29pCYj3ntftgARbTP0FA8xZyLBCF7f8")
+                                .key(AppUtils.GOOGLE_KEY)
                                 .build();
                         routing.execute();
 
@@ -304,7 +305,7 @@ public class WhereYouGoActivity extends AppCompatActivity implements TimePickerD
                                 .withListener(WhereYouGoActivity.this)
                                 .waypoints(new LatLng(fromLocation.getLatitude(), fromLocation.getLongitude()), new LatLng(toLocation.getLatitude(), toLocation.getLongitude()))
                                 .alternativeRoutes(false)
-                                .key("AIzaSyCE29pCYj3ntftgARbTP0FA8xZyLBCF7f8")
+                                .key(AppUtils.GOOGLE_KEY)
                                 .build();
                         routing.execute();
                     }
@@ -548,7 +549,7 @@ public class WhereYouGoActivity extends AppCompatActivity implements TimePickerD
     }
 
     public void getAddress(LatLng latLng) {
-        new ReverseGeocoding(latLng.latitude, latLng.longitude, "AIzaSyCE29pCYj3ntftgARbTP0FA8xZyLBCF7f8")
+        new ReverseGeocoding(latLng.latitude, latLng.longitude, AppUtils.GOOGLE_KEY)
                 .setLanguage("en")
                 .fetch(new Callback() {
                     @Override

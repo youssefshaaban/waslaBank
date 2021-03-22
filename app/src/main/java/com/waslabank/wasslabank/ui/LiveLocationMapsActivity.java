@@ -57,6 +57,7 @@ import com.waslabank.wasslabank.models.LatLngModel;
 import com.waslabank.wasslabank.models.RequestModel;
 import com.waslabank.wasslabank.models.StatusModel;
 import com.waslabank.wasslabank.networkUtils.Connector;
+import com.waslabank.wasslabank.utils.AppUtils;
 import com.waslabank.wasslabank.utils.Helper;
 import com.waslabank.wasslabank.utils.LocationHelper;
 
@@ -286,7 +287,7 @@ public class LiveLocationMapsActivity extends AppCompatActivity implements OnMap
                     .travelMode(Routing.TravelMode.DRIVING)
                     .withListener(this)
                     .waypoints(start, point)
-                    .key("AIzaSyCE29pCYj3ntftgARbTP0FA8xZyLBCF7f8")
+                    .key(AppUtils.GOOGLE_KEY)
                     .build();
             routing1.execute();
         } else {
@@ -295,7 +296,7 @@ public class LiveLocationMapsActivity extends AppCompatActivity implements OnMap
                     .travelMode(Routing.TravelMode.DRIVING)
                     .withListener(this)
                     .waypoints(start, point, point2, end)
-                    .key("AIzaSyCE29pCYj3ntftgARbTP0FA8xZyLBCF7f8")
+                    .key(AppUtils.GOOGLE_KEY)
                     .build();
             routing1.execute();
         }
@@ -309,7 +310,7 @@ public class LiveLocationMapsActivity extends AppCompatActivity implements OnMap
                 .travelMode(Routing.TravelMode.DRIVING)
                 .withListener(this)
                 .waypoints(start, car, end)
-                .key("AIzaSyCE29pCYj3ntftgARbTP0FA8xZyLBCF7f8")
+                .key(AppUtils.GOOGLE_KEY)
                 .build();
         routing1.execute();
         if (e != null) {

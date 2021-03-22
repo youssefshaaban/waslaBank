@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
-           printHashKey(this);
+           //printHashKey(this);
         ////
         initFacebookLogin();
         //  LoginManager.getInstance().logOut();
@@ -355,8 +355,10 @@ public class LoginActivity extends AppCompatActivity {
                 String hashKey = new String(Base64.encode(md.digest(), 0));
                 Log.i("KeyHash", "printHashKey() Hash Key: " + hashKey);
             }
-        } catch (NoSuchAlgorithmException e) {
-            Log.e("", "printHashKey()", e);
+//            byte[] sha1 = {
+//                    0x6A, 0x43, 0x0F, 0x44, (byte) 0xFA, (byte) 0x83, (byte) 0xDF, (byte) 0x8C, (byte) 0xF0, 0x26, (byte) 0xFE, 0x20, 0x65, (byte)0xE8, 0x7D, 0x3E, (byte)0x3C, (byte)0x5A, 0x19, (byte)0x9F
+//            };
+//            Log.e("keyhash111", Base64.encodeToString(sha1, Base64.NO_WRAP));
         } catch (Exception e) {
             Log.e("", "printHashKey()", e);
         }

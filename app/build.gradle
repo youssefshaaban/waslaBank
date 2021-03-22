@@ -8,8 +8,8 @@ android {
         applicationId "com.waslabank.wasslabank"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 25
-        versionName "6.9"
+        versionCode 29
+        versionName "9"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

@@ -67,8 +67,8 @@
     <string name="facebook">Continue With Facebook</string>
     <string name="google">Continue With Google</string>
     <string name="error_in_credentials">Error in your Credentials</string>
-    <string name="facebook_app_id">798421313829733</string>
-    <string name="fb_login_protocol_scheme">fb798421313829733</string>
+    <string name="facebook_app_id">3210267425737786</string>
+    <string name="fb_login_protocol_scheme">fb3210267425737786</string>
     <string name="license_image">Upload Your License Image</string>
     <string name="upload_car_image">Upload Your Car Image</string>
     <string name="car_details">Car Details</string>
